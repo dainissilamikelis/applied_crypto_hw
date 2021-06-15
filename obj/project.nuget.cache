@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "eNKY4cHzGg0CJIfpdmKSTmH4OTyENU6T+e9Ik+J1LsTpo83YKnqdeY+jAQXDy0vToQbJCBWaASN7QxLglFsAbw==",
+  "success": true,
+  "projectFilePath": "/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/hw_try_2.csproj",
+  "expectedPackageFiles": [
+    "/Users/dainis.silamikelis1nce.com/.nuget/packages/system.formats.asn1/5.0.0/system.formats.asn1.5.0.0.nupkg.sha512",
+    "/Users/dainis.silamikelis1nce.com/.nuget/packages/system.security.cryptography.openssl/5.0.0/system.security.cryptography.openssl.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

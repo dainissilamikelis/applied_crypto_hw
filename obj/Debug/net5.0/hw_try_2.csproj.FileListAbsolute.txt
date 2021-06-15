@@ -1,0 +1,15 @@
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/bin/Debug/net5.0/hw_try_2.deps.json
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/bin/Debug/net5.0/hw_try_2.runtimeconfig.json
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/bin/Debug/net5.0/hw_try_2.runtimeconfig.dev.json
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/bin/Debug/net5.0/hw_try_2.dll
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/bin/Debug/net5.0/ref/hw_try_2.dll
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/bin/Debug/net5.0/hw_try_2.pdb
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.csprojAssemblyReference.cache
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.AssemblyInfoInputs.cache
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.AssemblyInfo.cs
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.csproj.CoreCompileInputs.cache
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.dll
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/ref/hw_try_2.dll
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.pdb
+/Users/dainis.silamikelis1nce.com/Projects/hw_try_2/hw_try_2/obj/Debug/net5.0/hw_try_2.genruntimeconfig.cache

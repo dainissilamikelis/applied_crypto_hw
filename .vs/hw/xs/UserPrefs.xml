@@ -1,0 +1,31 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{F2B7F51C-9380-49A6-BCE6-96A06870EC4C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CFB.cs">
+    <Files>
+      <File FileName="Program.cs" Line="59" Column="32" />
+      <File FileName="CBC.cs" />
+      <File FileName="data.json" />
+      <File FileName="CFB.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="hw" expanded="True">
+            <Node name="hw" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.hw PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/dainis.silamikelis1nce.com/Documents/study/applied_crypto_hw/CBC.cs" relfile="CBC.cs" line="178" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

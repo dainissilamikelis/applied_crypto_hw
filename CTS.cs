@@ -18,7 +18,7 @@ namespace hw.cts
                 var encrypted = Encrypt_Internal(plain_text, key, plain_text.Length > 16 ? iv : new byte[iv.Length]);
 
 
-                if (plain_text.Length >= 32) Swap_Blocks(encrypted);
+                if (plain_text.Length >= 32) hw.helper.Helper.Swap_Last_Blocks(encrypted);
 
 
                 return encrypted;
@@ -29,7 +29,6 @@ namespace hw.cts
                 byte[] copy = new byte[plain_text.Length + pad_size];
                 Buffer.BlockCopy(plain_text, 0, copy, 0, plain_text.Length);
 
-                // Pad latest plain text block with 0s.
                 for (int i = 0; i < pad_size; i++)
                 {
                     copy[copy.Length - pad_size + i] = 0;
@@ -38,7 +37,7 @@ namespace hw.cts
                 var encrypted = Encrypt_Internal(copy, key, iv);
 
 
-                if (encrypted.Length >= 32) Swap_Blocks(encrypted);
+                if (encrypted.Length >= 32) hw.helper.Helper.Swap_Last_Blocks(encrypted);
 
 
                 return encrypted.Take(plain_text.Length).ToArray();
@@ -60,7 +59,7 @@ namespace hw.cts
                 Buffer.BlockCopy(cipher_text, 0, copy, 0, cipher_text.Length);
 
 
-                if (cipher_text.Length >= 32) Swap_Blocks(copy);
+                if (cipher_text.Length >= 32) hw.helper.Helper.Swap_Last_Blocks(copy);
 
 
                 return Decrypt_Internal(copy, key, copy.Length == 16 ? new byte[iv.Length] : iv);
@@ -76,7 +75,7 @@ namespace hw.cts
                 Buffer.BlockCopy(dn, dn.Length - pad_size, copy, cipher_text.Length, pad_size);
 
 
-                Swap_Blocks(copy);
+                hw.helper.Helper.Swap_Last_Blocks(copy);
 
                 return Decrypt_Internal(copy, key, iv).Take(cipher_text.Length).ToArray();
             }
@@ -123,15 +122,7 @@ namespace hw.cts
             }
         }
 
-        private static void Swap_Blocks(byte[] data)
-        {
-            for (int i = 0; i < 16; i++)
-            {
-                byte temp = data[i + data.Length - 32];
-                data[i + data.Length - 32] = data[i + data.Length - 16];
-                data[i + data.Length - 16] = temp;
-            }
-        }
+        
 
     }
 }

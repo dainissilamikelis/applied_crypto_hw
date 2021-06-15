@@ -28,9 +28,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Afana.Cryptography">
-      <HintPath>..\packages\AesCts.1.0.0\lib\net40\Afana.Cryptography.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -41,6 +38,7 @@
     <Compile Include="CTS.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="CBC.cs" />
+    <Compile Include="CFB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
