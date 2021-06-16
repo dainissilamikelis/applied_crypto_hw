@@ -18,7 +18,6 @@ namespace hw_try_2
                 aesAlg.Mode = CipherMode.CFB;
                 aesAlg.Key = Key;
                 aesAlg.IV = iv;
-                aesAlg.Padding = PaddingMode.PKCS7;
 
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
                 var bytes = encryptor.TransformFinalBlock(block, 0, block.Length);
@@ -34,7 +33,6 @@ namespace hw_try_2
                 aesAlg.Mode = CipherMode.CFB;
                 aesAlg.Key = key;
                 aesAlg.IV = iv;
-                aesAlg.Padding = PaddingMode.PKCS7;
 
                 ICryptoTransform encryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
                 var bytes = encryptor.TransformFinalBlock(block, 0, block.Length);
@@ -56,7 +54,7 @@ namespace hw_try_2
                 dynamic iv_new = iv;
                 var data = Decrypt_Block(block, key, iv_new);
                 decrypted.Add(data);
-                iv_new = block;
+               // iv_new = block;
             }
 
             var array_1 = decrypted.ToArray();
@@ -77,12 +75,13 @@ namespace hw_try_2
 
             var encrypted = new List<byte[]>();
 
+
             foreach (var block in blocks)
             {
                 dynamic iv_new = iv;
 
                 var data = Encrypt_Block(block, key, iv_new);
-                iv_new = data;
+                //iv_new = data;
                 encrypted.Add(data);
             }
 

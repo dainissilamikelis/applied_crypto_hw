@@ -132,20 +132,24 @@ namespace hw_try_2
 
             var key = Task_1_Key();
             var text = Task_1_Text();
-
+            byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             if (choice)
             {
-                byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                var plain_text_bytes = Encoding.UTF8.GetBytes(text);
 
                 var encrypted = hw_try_2.CBC.CBC_ENCRYPTION(text, key, iv);
-
-                // Console.WriteLine("BASE 64 cipher text {0}", Convert.ToBase64String(encrypted));
                 Console.WriteLine("Binary stored in file hw_1_1_cipher", Convert.ToBase64String(encrypted));
 
+                var decoded = hw_try_2.CBC.CBC_DECRYPTION(encrypted, key, iv);
+                Console.WriteLine("DECODED TEST -> {0}", System.Text.Encoding.UTF8.GetString(decoded));
+
+                hw_try_2.helper.helper.Binary_Str_To_Byte("test");
+
+                hw_try_2.helper.helper.CreateBinaryFile(plain_text_bytes, "hw_1_1_plain");
                 hw_try_2.helper.helper.CreateBinaryFile(encrypted, "hw_1_1_cipher");
             } else
             {
-                var encrypted_bytes = 
+                byte[] encrypted_bytes = hw_try_2.helper.helper.Binary_Str_To_Byte(text);
                 var decoded = hw_try_2.CBC.CBC_DECRYPTION(encrypted_bytes, key, iv);
                 hw_try_2.helper.helper.CreateBinaryFile(decoded, "hw_1_1_plain");
             }
@@ -157,7 +161,10 @@ namespace hw_try_2
             var key = Task_1_Key();
             var text = Task_1_Text();
 
-
+            Random rnd = new Random();
+            byte[] iv = new byte[16];
+            rnd.NextBytes(iv);
+        
 
             var encrypted = hw_try_2.CFB.CFB_ENCRYPTION(text, key, iv);
 
@@ -167,10 +174,10 @@ namespace hw_try_2
 
 
             Console.WriteLine("BASE 64 cipher text {0}", Convert.ToBase64String(encrypted));
-            Console.WriteLine("Binary stored in file hw_1_1_cipher", Convert.ToBase64String(encrypted));
+            Console.WriteLine("Binary stored in file hw_1_2_cipher", Convert.ToBase64String(encrypted));
 
-            hw_try_2.helper.helper.CreateBinaryFile(decoded, "hw_1_1_plain");
-            hw_try_2.helper.helper.CreateBinaryFile(encrypted, "hw_1_1_cipher");
+            hw_try_2.helper.helper.CreateBinaryFile(decoded, "hw_1_2_plain");
+            hw_try_2.helper.helper.CreateBinaryFile(encrypted, "hw_1_2_cipher");
 
             Console.WriteLine("Decrypted text is  - {0}", encrypted_text);
 
@@ -190,6 +197,18 @@ namespace hw_try_2
             if (task == "1")
             {
                 Task_1();
+            }
+            else if (task == "2")
+            {
+                Task_2();
+            }
+            else if (task == "R")
+            {
+                Main_Dialog();
+            }
+            else if (task == "Q")
+            {
+                Environment.Exit(-1);
             }
         }
             

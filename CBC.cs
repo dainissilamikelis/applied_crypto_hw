@@ -45,7 +45,7 @@ namespace hw_try_2
                 aesAlg.Mode = CipherMode.CBC;
                 aesAlg.Key = key;
                 aesAlg.IV = iv;
-                aesAlg.Padding = PaddingMode.Zeros;
+                aesAlg.Padding = PaddingMode.None;
 
                 ICryptoTransform encryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
                 var bytes = encryptor.TransformFinalBlock(block, 0, block.Length);
